@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/myblogApp"> {/* Ensure the base path is correct */}
       <Routes>
         <Route path="/" element={<Home blogs={blogs} deleteBlog={deleteBlog} />} />
         <Route path="/add" element={<AddPost addBlog={addBlog} />} />
