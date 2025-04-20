@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Use HashRouter instead of BrowserRouter
 import './App.css';
 import Home from './pages/Home';
 import AddPost from './pages/AddPost';
@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-    <Router basename="/myblogApp"> {/* Ensure the base path is correct */}
+    <Router>
       <Routes>
         <Route path="/" element={<Home blogs={blogs} deleteBlog={deleteBlog} />} />
         <Route path="/add" element={<AddPost addBlog={addBlog} />} />
